@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel = "icon" type = "image/png" href = "image/icons2.jpg">
+</head>
+<style>
+    body {
+       background: orange url("") no-repeat;
+   }
+    .ruler{
+       border-left: 1px solid blue;
+       height: 50%;
+       position: absolute;
+       left: 50%; 
+    }
+</style>
+<body>
+    <div class="container mt-5">
+        <!-- Form option choose -->
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <select id="select" class="form-control">
+                    <option value="" disabled selected>Select a recipe</option>
+                </select>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <!-- For show name , image on Number of persons or under option choose  -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <table class="table table-borderless" id="table-result"></table>
+            </div>
+            <div class="col-4"></div>
+        </div>
+    </div>
+    <!-- For show button add and minus when click on it. -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="input-group mb-3" id="allMember">
+                    <h5>Number of persons &nbsp; &nbsp;</h5>
+                    <div class="input-group-prepend">
+                        <button type="button" id="minus">&minus;</button>
+                    </div>
+                    <input type="number" class="form-control text-center" value="0" disabled id="member" max="15"
+                        min="0">
+                    <div class="input-group-append">
+                        <button type="button" id="add">&#x2b;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+    <!-- For show ruler  -->
+    <div class="container mt-5">
+        <div class="text-center ruler" id="ruler"></div>
+        <div class="row">
+            <div class="col-6">
+                <!-- For show ingredient -->
+                <h5 id="ingredient" class="text-center"> Ingredients </h5>
+                <table class="table table-borderless" id="ingredient-result"></table>
+            </div>
+            <!-- For show instructions -->
+            <div class="col-6">
+                <h5 id="show-instruction" class="text-center">Instructions</h5>
+                <p id="instruction"></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="project/jquery-3.4.1.min.js"></script>
+    <script src="project/project.js"></script>
+</body>
+</html>
+
